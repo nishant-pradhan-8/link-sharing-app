@@ -15,7 +15,7 @@ function InputLink({id,link}){
         <fieldset  >
             <label id="link" className="link-input-heading">Link</label>
             <div className="url-div-wrapper">
-                <img className="link-input-icon" src="all_images/icon-link.svg" />
+                <img className="link-input-icon" src="./all_images/icon-link.svg" />
                 <input className={`${emptyLinks[id]&&'profile-details-error'}`} value={link} onChange={(e)=>handleLinkInput(e,id)} id={`link-${id}`} type="url" placeholder="e.g. https://example.com" />
             </div>
             

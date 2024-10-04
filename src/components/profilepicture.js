@@ -43,7 +43,7 @@ function ProfilePicture(){
             <div className="profile-pic-input-wrapper">
             <label style={{ backgroundImage: `url(${profileDetails.profilePic})` }}
  htmlFor="profile-picture" className="pp-label bg-no-repeat bg-center bg-cover">
-                <img src="/all_images/icon-upload-image.svg" />
+                <img src="./all_images/icon-upload-image.svg" />
                  <input accept=".jpg, .jpeg, .png" onChange={(e)=>handleImageUpload(e)} type="file" id="profile-picture" name="profile-picture" />
                  <p className="upload-img-text">+ Upload Image</p>
             </label>

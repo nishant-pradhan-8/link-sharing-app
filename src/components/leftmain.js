@@ -4,7 +4,7 @@ function LeftMain(){
     const {isWideScreen,profilePic,firstName,lastName,email, selectedLinks,tempImg,profileDetails,urlValid} = useContext(DataContext)
     return(
         <section style={{display:isWideScreen>=1024?'flex':'none'}} className="mockup-section" >
-            <img className="phone-mockup" src="/all_images/illustration-phone-mockup.svg" />
+            <img className="phone-mockup" src="./all_images/illustration-phone-mockup.svg" />
             <div style={{display:profileDetails.profilePic?'block':'none',backgroundImage:`url(${profileDetails.profilePic})`}} className="profile-pic-mockup bg-cover bg-no-repeat bg-center">
             </div>
             <div style={{display:profileDetails.firstName || profileDetails.lastName?'block':'none'}} className="mockup-heading-div">
@@ -21,7 +21,7 @@ function LeftMain(){
                                         <img src={linkDiv.selected_image}></img>
                                         <p className="social-name" >{linkDiv.selected_social}</p>
                                     </div>
-                                    <img className="arrow-right" src="/all_images/icon-arrow-right.svg" />
+                                    <img className="arrow-right" src="./all_images/icon-arrow-right.svg" />
                                 </a>
                     })
                 }

@@ -15,7 +15,7 @@ function LinkBoxHeader({id}){
     return(
         <div className="social-link-box-header">
                         <div className="slb-left">
-                            <img src="/all_images/icon-drag-and-drop.svg" />
+                            <img src="./all_images/icon-drag-and-drop.svg" />
                             <h2 className="link-index">Link {id}</h2>
                         </div>
                         <div className="slb-right">

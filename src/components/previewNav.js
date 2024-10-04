@@ -22,7 +22,7 @@ function PreviewNav(){
     return(
         <div className = "right-section-nav">
             <button onClick={handlePreviewClick} style={{display:currentPath==="/profile"?'none':'block'}} className="primary-btn">
-                <img style={{display: isWideScreen>=768?'none':'block'}} className="preview-icon" src="/all_images/icon-preview-header.svg" />
+                <img style={{display: isWideScreen>=768?'none':'block'}} className="preview-icon" src="./all_images/icon-preview-header.svg" />
                 <h2 style={{display: isWideScreen>=768?'block':'none'}} className="nav-a-h2">Preview</h2>
             </button>
             <button onClick={handleShare} style={{display:currentPath==="/profile"?'block':'none'}} className="save-btn primary-btn share-btn">

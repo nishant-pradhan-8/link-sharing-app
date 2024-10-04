@@ -23,7 +23,7 @@ function MainNav() {
         >
           <a className="nav-a">
             
-            <img className="link-icon" src="/all_images/icon-link.svg" />
+            <img className="link-icon" src="./all_images/icon-link.svg" />
              <h2 className="nav-a-h2">Links</h2>
           </a>
         </li>
@@ -36,7 +36,7 @@ function MainNav() {
           <a className="nav-a">
             <img
               className="profile-icon"
-              src="/all_images/icon-profile-details-header.svg"
+              src="./all_images/icon-profile-details-header.svg"
             />
             <h2 className="nav-a-h2">Profile Details</h2>
             

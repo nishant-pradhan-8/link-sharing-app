@@ -5,72 +5,72 @@ function Dropdown({id,index}){
     
     const socials = [
         {
-            img:'/all_images/icon-github-gray.svg',
+            img:'./all_images/icon-github-gray.svg',
             name: 'Github',
             alt:'Github Icon'
         },
         {
-            img:'/all_images/icon-frontend-mentor-gray.svg',
+            img:'./all_images/icon-frontend-mentor-gray.svg',
             name: 'frontend Mentor',
             alt:'Frontend Mentor Icon'
         },
         {
-            img:'/all_images/icon-Twitter-gray.svg',
+            img:'./all_images/icon-Twitter-gray.svg',
             name: 'Twitter',
             alt:'Twitter Icon'
         },
         {
-            img:'/all_images/icon-linkedin-gray.svg',
+            img:'./all_images/icon-linkedin-gray.svg',
             name: 'LinkedIn',
             alt:'LinkedIn Icon'
         },
         {
-            img:'/all_images/icon-youtube-gray.svg',
+            img:'./all_images/icon-youtube-gray.svg',
             name: 'YouTube',
             alt:'YouTube Icon'
         },
         {
-            img:'/all_images/icon-facebook-gray.svg',
+            img:'./all_images/icon-facebook-gray.svg',
             name: 'Facebook',
             alt:'Facebook Icon'
         },
         {
-            img:'/all_images/icon-twitch-gray.svg',
+            img:'./all_images/icon-twitch-gray.svg',
             name: 'Twitch',
             alt:'Twitch Icon'
         },
         {
-            img:'/all_images/icon-devto-gray.svg',
+            img:'./all_images/icon-devto-gray.svg',
             name: 'Dev.to',
             alt:'Dev.to Icon'
         },
         {
-            img:'/all_images/icon-codewars-gray.svg',
+            img:'./all_images/icon-codewars-gray.svg',
             name: 'Codewars',
             alt:'Codewars Icon'
         },
         {
-            img:'/all_images/icon-codepen-gray.svg',
+            img:'./all_images/icon-codepen-gray.svg',
             name: 'Codepen',
             alt:'Codepen Icon'
         },
         {
-            img:'/all_images/icon-freecodecamp-gray.svg',
+            img:'./all_images/icon-freecodecamp-gray.svg',
             name: 'freeCodeCamp',
             alt:'freeCodeCamp Icon'
         },
         {
-            img:'/all_images/icon-gitlab-gray.svg',
+            img:'./all_images/icon-gitlab-gray.svg',
             name: 'Gitlab',
             alt:'Gitlab Icon'
         },
         {
-            img:'/all_images/icon-hashnode-gray.svg',
+            img:'./all_images/icon-hashnode-gray.svg',
             name: 'Hashnode',
             alt:'Hashnode Icon'
         },
         {
-            img:'/all_images/icon-stack-overflow-gray.svg',
+            img:'./all_images/icon-stack-overflow-gray.svg',
             name: 'Stack Overflow',
             alt:'Stack Overflow Icon'
         },

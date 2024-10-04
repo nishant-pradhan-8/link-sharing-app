@@ -5,8 +5,8 @@ function LogoNav(){
     return(
         <div style={{display:currentPath==="/profile"?'none':'block'}}  className="left-Section-Nav">
            <picture>
-            <source media="(max-width:768px)" srcSet="/all_images/logo-devlinks-small.svg"></source>
-            <img src="/all_images/logo-devlinks-large.svg"/>
+            <source media="(max-width:768px)" srcSet="./all_images/logo-devlinks-small.svg"></source>
+            <img src="./all_images/logo-devlinks-large.svg"/>
            </picture>
             
         </div>

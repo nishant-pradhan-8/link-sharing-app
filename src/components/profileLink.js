@@ -38,7 +38,7 @@ function ProfileLink(){
                                     <img src={linkDiv.selected_image}></img>
                                     <p className="social-name" >{linkDiv.selected_social}</p>
                                 </div>
-                                <img className="arrow-right" src="/all_images/icon-arrow-right.svg" />
+                                <img className="arrow-right" src="./all_images/icon-arrow-right.svg" />
                             </a>
                 })
             }

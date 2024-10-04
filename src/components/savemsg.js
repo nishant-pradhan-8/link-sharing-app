@@ -6,7 +6,7 @@ function SaveMessage(){
 
     return(
         <div className = {`saved-message-div ${saved && "saved-message-div-active"}`} >
-            <img  src="/all_images/icon-changes-saved.svg" />
+            <img  src="./all_images/icon-changes-saved.svg" />
             <p className="save-par">Your changes have been sucessfully saved!</p>
         </div>
     )

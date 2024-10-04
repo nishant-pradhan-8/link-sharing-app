@@ -5,7 +5,7 @@ function CopyMessage(){
 
     return(
         <div className = {`saved-message-div ${copied && "saved-message-div-active"}`}>
-            <img  src="/all_images/icon-link-copied-to-clipboard.svg" />
+            <img  src="./all_images/icon-link-copied-to-clipboard.svg" />
             <p className="save-par">The link has been copied to your clipboard</p>
         </div>
     )

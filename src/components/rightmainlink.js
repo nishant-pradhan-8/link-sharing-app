@@ -13,10 +13,10 @@ function RightMainLink(){
     function handleAddLink(){
         let linkDiv = {}
         if(selectedLinks.length===0){
-            linkDiv = {'id':1,'selected_image':"/all_images/icon-github-gray.svg",'selected_social':'Github','link':''}
+            linkDiv = {'id':1,'selected_image':"./all_images/icon-github-gray.svg",'selected_social':'Github','link':''}
         }
         else{
-            linkDiv = {'id':selectedLinks[selectedLinks.length - 1].id +1,'selected_image':"/all_images/icon-github-gray.svg",'selected_social':'Github','link':''}
+            linkDiv = {'id':selectedLinks[selectedLinks.length - 1].id +1,'selected_image':"./all_images/icon-github-gray.svg",'selected_social':'Github','link':''}
         }
     
         const newLinkDivs = [...selectedLinks,linkDiv]
@@ -30,7 +30,7 @@ function RightMainLink(){
             </button>
             <div className="rm-div-wrapper">
                 <div style={{display:selectedLinks.length===0?'flex':'none'}} className="rm-div rm-div-no-links">
-                <img src="/all_images/illustration-empty.svg" />
+                <img src="./all_images/illustration-empty.svg" />
                 <h1 className="primary-heading text-center">Let's get you started</h1>
                 <p className="primary-paragraph text-center">Use the "Add new link" button to get started. Once you have more than one link, you can reorder and edit them. We're here to help you share your profiles with everyone!</p>
                 </div>
