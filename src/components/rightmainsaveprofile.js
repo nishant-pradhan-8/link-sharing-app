@@ -2,7 +2,7 @@ import { useContext, useEffect} from "react"
 import DataContext from "../context/context"
 import useDataBase from "../firebase"
 function  RightMainSaveProfile(){
-    const {  setSaving,setSaved,linkDivs,profileDetailsStatus, setProfileDetailsStatus, profileDetails,setProfileDetails, setEmptyInput, emptyInput,selectedLinks} = useContext(DataContext)
+    const {  setSaving,setSaved, setProfileDetailsStatus, profileDetails, setEmptyInput, emptyInput,selectedLinks} = useContext(DataContext)
     const {profileStore} = useDataBase()
     async function handleSave(){
             setSaving(true)
@@ -13,6 +13,8 @@ function  RightMainSaveProfile(){
             await profileStore(selectedLinks)
             setSaving(false)
             setSaved(true)
+            setProfileDetailsStatus(true)
+            localStorage.setItem('profileDetailsStatus',true)
             
             setTimeout(()=>{
                 setSaved(false)

@@ -2,7 +2,7 @@ import { useContext, useState} from "react"
 import DataContext from "../context/context"
 import useDataBase from "../firebase"
 function RightMainSave(){
-    const { setSaved,setEmptyLinks,setSaving, setRepeatedLink,selectedLinks,profileDetailsStatus,setLinkDivs} = useContext(DataContext)
+    const { setSaved,setEmptyLinks,setSaving,setProfileDetailsStatus, setRepeatedLink,selectedLinks,profileDetailsStatus,setLinkDivs} = useContext(DataContext)
     const {profileStore} = useDataBase()
     const [profileNotSet, setProfileNotSet] = useState(false)
     const [noLinksMsg, setNoLinksMsg] = useState(false)
@@ -43,6 +43,7 @@ function RightMainSave(){
         if (Object.keys(newError).length===0){
            await profileStore()
             setLinkDivs(selectedLinks)
+           
             localStorage.setItem('selectedLinks',JSON.stringify(selectedLinks))
             setSaving(false)
             setSaved(true)

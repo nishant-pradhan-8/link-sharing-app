@@ -23,7 +23,7 @@ export const DataProvider = ({children})=>{
     const [profilePic, setProfilePic] = useState(JSON.parse(localStorage.getItem('profilePic')) || '');
     const [copied,setCopied]= useState(false)
     const [imageFile, setImageFile] = useState('')
-    const [profileDetailsStatus, setProfileDetailsStatus] = useState((localStorage.getItem('profileDetailsStatus')) || 'false')
+    const [profileDetailsStatus, setProfileDetailsStatus] = useState((localStorage.getItem('profileDetailsStatus')) || false)
     const [imageChange, setImageChange] = useState(false)
     const [repeatedLink, setRepeatedLink] = useState(false)
     const [saving, setSaving] = useState(false)
@@ -76,7 +76,7 @@ export const DataProvider = ({children})=>{
         };
     }, []);
     return(
-        <DataContext.Provider value={{saving, setSaving,repeatedLink, setRepeatedLink,currentPath,imageChange, setImageChange, isWideScreen,linkDivs,imageFile, setImageFile, setLinkDivs,saved, setSaved,profileDetails, setProfileDetails,handleMockUpUpdate,emptyInput, setEmptyInput,emptyLinks, setEmptyLinks,profilePic, setProfilePic,selectedLinks, setSelectedLinks,profileDetailsStatus, setProfileDetailsStatus,retreivedData,setRetrivedData,copied,setCopied}}>
+        <DataContext.Provider value={{saving, setSaving,repeatedLink, setRepeatedLink,currentPath,imageChange, setImageChange, isWideScreen,linkDivs,imageFile, setImageFile, setLinkDivs,saved, setSaved,profileDetails, setProfileDetails,handleMockUpUpdate,emptyInput, setEmptyInput,emptyLinks, setEmptyLinks,profilePic, setProfilePic,selectedLinks, setSelectedLinks,profileDetailsStatus, setProfileDetailsStatus,retreivedData,setRetrivedData,copied,setCopied,setProfileDetailsStatus}}>
             {children}
         </DataContext.Provider>
     )
