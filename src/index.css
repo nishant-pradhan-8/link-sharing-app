@@ -1,13 +1,379 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --paragraph-color: #737373;
+  --purple: #633CFF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base{
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    @apply h-screen font-primary-font bg-gray-100 relative
+  }
+  #root, .app{
+    @apply h-full 
+  }
+  header{
+    @apply max-w-[868px] m-auto
+  }
+  main{
+    @apply max-w-[868px] m-auto
+  }
+  @media(min-width:1024px){
+    header,main{
+      @apply max-w-none 
+    }
+  }
+  /* HTML: <div class="loader"></div> */
+.loader {
+  width: 24px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
 }
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+ 
+  
+}
+
+@layer components{
+  .primary-main{
+    grid-template-columns: 1fr;
+    @apply grid 
+  }
+  .mockup-section{
+    @apply bg-white mb-4 ml-4 rounded-lg flex items-center justify-center p-4 relative
+
+  }
+  .phone-mockup{
+    @apply w-60
+  }
+  .nav{
+    @apply flex justify-between items-center px-4  py-[0.8rem] bg-white mb-4; 
+  }
+  .nav-ul{
+    @apply flex gap-4 items-stretch justify-center
+  }
+  .nav-li-active{
+    color: var(--purple);
+    @apply  bg-gray-200 rounded-lg
+  }
+  .right-section-nav{
+    @apply flex
+  }
+  .nav-a{
+    @apply font-medium
+  }
+  .nav-li{
+    @apply px-[1.3rem] py-2 cursor-pointer
+  }
+  .profile-icon{
+    @apply w-[1.3rem]
+  }
+  .link-icon{
+    @apply w-[1.2rem]
+  }
+  .primary-btn{
+    border: 1px solid var(--purple);
+    color: var(--purple);
+    @apply rounded-lg px-4 py-2 font-primary-font font-semibold leading-lh
+  }
+  .primary-heading{
+    @apply text-2xl font-bold leading-lh
+  }
+  
+  .primary-paragraph{
+    color: var(--paragraph-color);
+    @apply text-[1rem] font-normal leading-lh
+  }
+  .add-link-btn{
+    color: var(--purple);
+    @apply w-full font-semibold leading-lh py-[0.7rem] mb-10
+  }
+  .link-div{
+    @apply bg-gray-100
+  }
+  .details-section{
+    @apply bg-white mx-4 mb-4 py-4  flex flex-col gap-10 rounded-lg self-start
+  }
+  .rmh-wrapper{
+    @apply flex flex-col gap-3 px-6
+  }
+  .rml-wrapper{
+    @apply  px-6
+  }
+  
+  .rm-div{
+    
+    @apply py-6 px-6  flex flex-col items-center justify-center gap-4 rounded-lg bg-gray-100
+  }
+  
+  .save-btn{
+    background-color: var(--purple);
+    @apply w-full text-white font-semibold ;
+  }
+
+  .rm-div-wrapper{
+    @apply flex flex-col gap-4
+  }
+
+  .rms-wrapper{
+    @apply border-t-2 px-6 pt-4
+  }
+  #profile-picture{
+    @apply w-full 
+  }
+  .form-div{
+    @apply mx-4 items-start gap-4 
+  }
+  input[type="file"]{
+    display: none;
+  }
+  .pp-label{
+    @apply w-52 bg-gray-200 flex justify-center items-center h-56 rounded-lg flex-col cursor-pointer
+  }
+  .upload-img-text{
+    color: var(--purple);
+    @apply font-semibold
+  }
+  .form-heading{
+    color: var(--paragraph-color);
+    @apply text-[1.2rem]
+  }
+  .upload-message{
+    color: var(--paragraph-color);
+
+  
+
+    @apply text-xs leading-lh mt-4
+  }
+  .details-inputfield{
+    @apply w-full px-4 py-4 rounded-lg mt-2 outline-none
+  }
+  .details-inputfield::placeholder{
+    @apply text-[0.9rem]
+  }
+  .input-div{
+    @apply w-full flex flex-col
+  }
+  .profile-card-wrapper
+  {
+    @apply flex flex-col items-center gap-4
+  }
+  .profile-circle{
+    @apply bg-gray-100 w-24 h-24 rounded-full
+  }
+
+  .empty-div{
+    @apply bg-gray-100 w-40 h-4 rounded-xl
+  }
+  .small-empty-div{
+    @apply w-20 h-2
+  }
+  .nav-a-h2{
+    @apply hidden
+  }
+  .profile-card-wrapper{
+    @apply p-8 w-[19rem] bg-white m-auto mt-4 rounded-lg
+  }
+  .social-link-div{
+    @apply bg-black flex justify-between items-center  rounded-[5px] p-[0.6rem] w-[11.6rem]
+  }
+  .social-link-div-wrapper{
+    @apply absolute top-[15.5rem] gap-[0.9rem] flex flex-col 
+  }
+  .social-link-detail{
+    @apply flex flex-row gap-2
+  }
+  .social-name{
+    @apply text-white text-xs
+  }
+
+  .mockup-section{
+    @apply self-start p-8
+  }
+  .social-link-box-header{
+    @apply w-full flex justify-between items-center
+  }
+  .slb-left{
+    @apply flex items-center justify-center gap-2
+  }
+  .link-index{
+    @apply text-gray-600 font-bold
+  }
+  .social-link-fieldset{
+    @apply w-full flex flex-col gap-2
+  }
+  .remove-btn{
+    @apply text-gray-600
+  }
+  .selectField{
+    @apply flex flex-row justify-between items-center rounded-lg bg-white p-4 cursor-pointer
+  }
+  .social-intro-div{
+    @apply flex gap-2
+  }
+  .link-input-heading{
+    @apply mb-2 text-[.9rem]
+  }
+  .options{
+    @apply  bg-white m-4 cursor-pointer pb-[0.8rem] border-b-[0.5px] border-gray-500
+  }
+  .options:hover .social-name-link-box{
+    color: var(--purple);
+  }
+  .select{
+    @apply bg-white rounded-lg overflow-y-auto h-44 mt-4 absolute w-full z-10
+  }
+  .selector{
+    @apply relative
+  }
+
+  input[type="url"]{
+    @apply w-full p-4 rounded-lg pl-[2.8rem] outline-none
+
+  }
+  .url-div-wrapper{
+    @apply relative 
+  }
+  .link-input-icon{
+    @apply absolute top-[1.2rem] left-4
+  }
+ .profile-pic-mockup{
+    @apply rounded-full absolute w-20 h-20 top-20
+  }
+  .saved-message-div{
+    transition: top 0.3s ease;
+    @apply w-[310.71px] text-[0.8rem] p-[0.7rem] flex flex-row bg-black text-white fixed top-[-10rem] rounded-lg gap-4 left-0 right-0  m-auto
+  }
+  
+  .saved-message-div-active{
+    @apply top-4
+  }
+  .social-link-div-wrapper-preview{
+    @apply static items-center mt-6 w-full
+  }
+  .social-link-div-preview{
+    @apply w-full p-4 
+  }
+  .mockup-heading-div-preview{
+    @apply static w-full text-center
+  }
+  .mockup-heading-div-email-preview{
+    @apply static w-full text-center
+  }
+
+  .profile-details-error{
+      border-width: 1px;
+      @apply border-red-600
+  }
+  .profile-details-error::placeholder{
+    @apply text-red-600
+  }
+
+  .profile-card-wrapper-personal{
+    @apply bg-gray-100 mt-8
+  }
+
+  @media(min-width:475px){
+    .saved-message-div{
+    
+      @apply   p-[0.8rem] w-[375.71px] text-[1rem]
+    }
+  }
+  
+  @media(min-width:600px){
+    .nav{
+      @apply m-4 rounded-lg border-white
+    }
+    .nav-a-h2{
+      @apply block
+    }
+    .nav-li{
+      @apply flex items-center justify-center
+    }
+    .nav-a{
+      @apply flex items-center justify-center gap-2
+    }
+    .save-btn{
+      @apply w-auto float-right
+    }
+    .overlay{
+      background-color: var(--purple);
+      @apply absolute h-[20rem] w-full z-[-1] mt-[-5rem]
+    }
+   
+    .mockup-heading-div{
+      @apply absolute top-[10.5rem] bg-white w-32 text-center
+    }
+    .mockup-heading-div-email{
+      @apply absolute top-[12rem]  bg-white w-52 text-center
+    }
+    .mockup-h1{
+      
+      @apply font-semibold whitespace-nowrap overflow-hidden text-ellipsis
+    }
+    .mockup-email{
+      @apply text-[0.8rem]  whitespace-nowrap overflow-hidden text-ellipsis
+    }
+    .mockup-heading-div-preview{
+      @apply static w-full
+    }
+    .mockup-heading-div-email-preview{
+      @apply static w-full
+    }
+    .profile-card-wrapper{
+      box-shadow: 0 0 32px 0 rgba(0, 0, 0, .1);
+      @apply mt-20 w-[25rem]
+    }
+    .social-link-div-wrapper{
+      height: 233.6px;
+      @apply overflow-hidden
+    }
+     .profile-card-wrapper-personal{
+      @apply bg-white
+    }
+   
+    
+  }
+
+  @media(min-width:768px){
+    .image-form-div{
+      @apply flex-row justify-between
+    }
+    .profile-pic{
+      @apply flex gap-4 items-center
+    }
+    .image-upload-message{
+      @apply w-44
+    }
+    .profile-pic-input-wrapper{
+      @apply flex flex-row gap-4 items-center
+    }
+  }
+  @media(min-width: 1024px){
+    .primary-main{
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  
+}
+
