@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/link-sharing-app/static/css/main.ab796b60.css",
+    "main.js": "/link-sharing-app/static/js/main.2529364f.js",
+    "index.html": "/link-sharing-app/index.html",
+    "main.ab796b60.css.map": "/link-sharing-app/static/css/main.ab796b60.css.map",
+    "main.2529364f.js.map": "/link-sharing-app/static/js/main.2529364f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab796b60.css",
+    "static/js/main.2529364f.js"
+  ]
+}
