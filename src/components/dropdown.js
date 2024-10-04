@@ -106,7 +106,7 @@ function Dropdown({id,index}){
                     <img src={selectedLinks.length && selectedLinks[index].selected_image} />
                     <p>{selectedLinks.length && selectedLinks[index].selected_social}</p>
                     </div> 
-                    <img style={{rotate:dropDownOpen?'180deg':'0deg'}} src="/all_images/icon-chevron-down.svg" />
+                    <img style={{rotate:dropDownOpen?'180deg':'0deg'}} src="./all_images/icon-chevron-down.svg" />
                 </div>
                 <ul style={{display:dropDownOpen?'block':'none'}} className="select">
                     {
