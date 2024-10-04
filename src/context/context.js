@@ -7,7 +7,6 @@ export const DataProvider = ({children})=>{
     const location = useLocation()
     const currentPath = location.pathname;
     const [linkDivs, setLinkDivs] = useState(JSON.parse(localStorage.getItem('selectedLinks')) ||[])
-
     const [selectedLinks, setSelectedLinks] = useState(JSON.parse(localStorage.getItem('selectedLinks')) || [])
     const [profileDetails, setProfileDetails] = useState( JSON.parse(localStorage.getItem('profileDetails')) ||{
         'documentId':'',
@@ -22,12 +21,8 @@ export const DataProvider = ({children})=>{
     const [saved, setSaved]= useState(false)
     const [emptyLinks, setEmptyLinks] = useState({})
     const [profilePic, setProfilePic] = useState(JSON.parse(localStorage.getItem('profilePic')) || '');
-    const [firstName, setFirstName] = useState(JSON.parse(localStorage.getItem('firstName')) ||'');
-    const [lastName, setLastName] = useState(JSON.parse(localStorage.getItem('lastName')) ||'');
-    const [email, setEmail] = useState(JSON.parse(localStorage.getItem('email')) ||'');
     const [copied,setCopied]= useState(false)
     const [imageFile, setImageFile] = useState('')
-    const [urlValid, setUrlValid] = useState(true)
     const [profileDetailsStatus, setProfileDetailsStatus] = useState((localStorage.getItem('profileDetailsStatus')) || 'false')
     const [imageChange, setImageChange] = useState(false)
     const [repeatedLink, setRepeatedLink] = useState(false)
@@ -81,7 +76,7 @@ export const DataProvider = ({children})=>{
         };
     }, []);
     return(
-        <DataContext.Provider value={{saving, setSaving,repeatedLink, setRepeatedLink,currentPath,imageChange, setImageChange, isWideScreen,linkDivs,imageFile, setImageFile, setLinkDivs,saved, setSaved,profileDetails, setProfileDetails,handleMockUpUpdate,emptyInput, setEmptyInput,emptyLinks, setEmptyLinks,profilePic, setProfilePic,firstName,lastName,email,selectedLinks, setSelectedLinks,profileDetailsStatus, setProfileDetailsStatus,retreivedData,setRetrivedData,copied,setCopied,urlValid}}>
+        <DataContext.Provider value={{saving, setSaving,repeatedLink, setRepeatedLink,currentPath,imageChange, setImageChange, isWideScreen,linkDivs,imageFile, setImageFile, setLinkDivs,saved, setSaved,profileDetails, setProfileDetails,handleMockUpUpdate,emptyInput, setEmptyInput,emptyLinks, setEmptyLinks,profilePic, setProfilePic,selectedLinks, setSelectedLinks,profileDetailsStatus, setProfileDetailsStatus,retreivedData,setRetrivedData,copied,setCopied}}>
             {children}
         </DataContext.Provider>
     )

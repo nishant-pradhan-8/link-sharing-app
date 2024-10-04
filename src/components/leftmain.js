@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import DataContext from "../context/context"
 function LeftMain(){
-    const {isWideScreen,profilePic,firstName,lastName,email, selectedLinks,tempImg,profileDetails,urlValid} = useContext(DataContext)
+    const {isWideScreen, selectedLinks,profileDetails} = useContext(DataContext)
     return(
         <section style={{display:isWideScreen>=1024?'flex':'none'}} className="mockup-section" >
             <img className="phone-mockup" src="./all_images/illustration-phone-mockup.svg" />

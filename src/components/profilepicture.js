@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import DataContext from "../context/context";
 function ProfilePicture(){
-    const { profileDetails,setImageChange, setProfileDetails,profilePic, setProfilePic,imageFile, setImageFile,urlValid} = useContext(DataContext)
+    const { profileDetails,setImageChange, setProfileDetails, setImageFile} = useContext(DataContext)
     const [errorImageUpload, setErrorImageUpload] = useState(false)
     
 
