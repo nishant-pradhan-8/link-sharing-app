@@ -5,9 +5,9 @@ import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject, } from "fir
 import { useContext} from "react"
 import DataContext from "./context/context";
 
-
+const apiKey = process.env.REACT_APP_API_KEY
 const firebaseConfig = {
-  apiKey: "AIzaSyDriq91MkhAsGjltnVTdd0f-6Yv_-UjGd8",
+  apiKey: apiKey,
   authDomain: "link-sharing-app-79afc.firebaseapp.com",
   projectId: "link-sharing-app-79afc",
   storageBucket: "link-sharing-app-79afc.appspot.com",
