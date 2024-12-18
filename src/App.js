@@ -10,11 +10,10 @@ import ProfileLink from "./components/profileLink";
 import CopyMessage from "./components/copymsg";
 import DoubleLinkMessage from "./components/doubleLink";
 import Loader from "./components/loader";
-
+import Login from "./components/login";
+import SignUp from "./components/signup";
 function App() {
   const {currentPath} = useContext(DataContext)
-  
-  
   return (
     <div className = "app">
       <div style={{display:currentPath==="/profile"||currentPath.startsWith('/profile/')?'block':'none'}} className="overlay"></div>
@@ -24,6 +23,8 @@ function App() {
         <Route path="/profileEdit" element={<Profile />}></Route>
         <Route path="/profile" element={<Preview />}></Route>
         <Route path="/profile/:id" element={<ProfileLink />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element= {<SignUp/>}></Route>
        </Routes>
        <SaveMessage />
        <CopyMessage />

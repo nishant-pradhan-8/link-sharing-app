@@ -2,9 +2,9 @@ import { useContext, useState} from "react"
 import DataContext from "../context/context"
 import useDataBase from "../firebase"
 function RightMainSave(){
-    const { setSaved,setEmptyLinks,setSaving,setProfileDetailsStatus, setRepeatedLink,selectedLinks,profileDetailsStatus,setLinkDivs} = useContext(DataContext)
-    const {profileStore} = useDataBase()
-    const [profileNotSet, setProfileNotSet] = useState(false)
+    const { setSaved,setEmptyLinks,setSaving,profileNotSet, setProfileNotSet,setProfileDetailsStatus, setRepeatedLink,selectedLinks,profileDetailsStatus,setLinkDivs} = useContext(DataContext)
+    const {updateProfile} = useDataBase()
+    
     const [noLinksMsg, setNoLinksMsg] = useState(false)
    async function handleSave(){
         setSaving(true)
@@ -14,11 +14,6 @@ function RightMainSave(){
             return setNoLinksMsg(true)
         }
         setNoLinksMsg(false)
-        if(!profileDetailsStatus){
-            setSaving(false)
-            return  setProfileNotSet(true)
-        }
-        setProfileNotSet(false)
         let newError = {}
         selectedLinks.map((linkDiv)=>{
             if(linkDiv.link.trim()===""){
@@ -41,10 +36,7 @@ function RightMainSave(){
         }
 
         if (Object.keys(newError).length===0){
-           await profileStore()
-            setLinkDivs(selectedLinks)
-           
-            localStorage.setItem('selectedLinks',JSON.stringify(selectedLinks))
+           await updateProfile()
             setSaving(false)
             setSaved(true)
             setTimeout(()=>{

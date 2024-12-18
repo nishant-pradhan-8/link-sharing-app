@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import DataContext from "../context/context"
 function ProfileDetails(){
-    const {handleMockUpUpdate,lastName,profileDetails, email,firstName,emptyInput} = useContext(DataContext)
+    const {handleMockUpUpdate,lastName,retreivedData,profileDetails, email,firstName,emptyInput} = useContext(DataContext)
     return(
         <fieldset className="rm-div form-div">
         <div className="input-div">

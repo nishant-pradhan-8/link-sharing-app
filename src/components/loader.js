@@ -5,7 +5,7 @@ export default function Loader(){
     const {saving} = useContext(DataContext)
     return(
         <div className = {`saved-message-div ${saving && "saved-message-div-active"}`} >
-        <div class="loader"></div>
+        <div className="loader"></div>
         <p className="save-par">Saving</p>
          </div>
     )

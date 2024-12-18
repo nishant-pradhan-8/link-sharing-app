@@ -5,7 +5,7 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 
 function PreviewNav(){
     const navigate = useNavigate()
-    const{currentPath, isWideScreen,profileDetails,setCopied} = useContext(DataContext)
+    const{currentPath, isWideScreen,profileDetails,setCopied,user} = useContext(DataContext)
     
     function handlePreviewClick(){
         navigate('/profile')
@@ -15,7 +15,7 @@ function PreviewNav(){
             setCopied(false)
         },2000)
         console.log(window.location.href)
-        const profileUrl = `${window.location.href}/${profileDetails.documentId}`
+        const profileUrl = `${window.location.href}/${user}`
         navigator.clipboard.writeText(profileUrl)
         setCopied(true)
     }

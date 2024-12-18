@@ -37,7 +37,7 @@
   padding: 8px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #25b09b;
+  background: #e2e20f;
   --_m: 
     conic-gradient(#0000 10%,#000),
     linear-gradient(#000 0 0) content-box;
@@ -127,9 +127,12 @@
   
   .save-btn{
     background-color: var(--purple);
-    @apply w-full text-white font-semibold ;
+    @apply  text-white font-semibold ;
   }
-
+  .signout-btn{
+    background-color: var(--purple);
+    @apply  text-white font-semibold ;
+  }
   .rm-div-wrapper{
     @apply flex flex-col gap-4
   }
@@ -163,6 +166,9 @@
   
 
     @apply text-xs leading-lh mt-4
+  }
+  .rmh-div{
+    @apply flex flex-row justify-between items-center pr-6
   }
   .details-inputfield{
     @apply w-full px-4 py-4 rounded-lg mt-2 outline-none
@@ -292,10 +298,54 @@
     @apply bg-gray-100 mt-8
   }
 
+
+  /*Login Page*/
+  .authentication-main{
+    @apply h-full
+  }
+  .authentication-container{
+    @apply flex flex-col justify-center items-center h-full gap-4 px-4
+  }
+
+.authenticaltion-div{
+@apply bg-white p-8 flex flex-col gap-4 rounded-lg max-w-[30rem]
+}
+.authentication-label{
+  @apply  text-[#333] text-[0.75rem] font-normal 
+}
+.authentication-text-div{
+  @apply flex flex-col gap-2 
+}
+.input-div{
+  @apply flex flex-col gap-1
+}
+.authentication-input{
+  @apply border-[1px] border-[#d9d9d9] w-full rounded-lg py-3 px-3
+}
+.authentication-btn{
+  background: var(--purple);
+  @apply w-full  text-white
+}
+.create-account-a{
+  color: var(--purple)
+}
+.authentication-form{
+  @apply flex flex-col gap-4
+}
+
+
+.authenticaltion-div{
+  @apply p-4
+}
+
+
   @media(min-width:475px){
     .saved-message-div{
     
       @apply   p-[0.8rem] w-[375.71px] text-[1rem]
+    }
+    .authenticaltion-div{
+      @apply p-8
     }
   }
   
@@ -377,3 +427,5 @@
   
 }
 
+
+/* HTML:  */

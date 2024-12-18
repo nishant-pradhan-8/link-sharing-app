@@ -9,7 +9,7 @@ function Header(){
     const {currentPath} = useContext(DataContext)
     return(
 
-        <header style={{display:currentPath.startsWith("/profile/")?'none':'block'}}>
+        <header style={{display:currentPath.startsWith("/profile/")||currentPath==="/login"||currentPath==="/signup"?'none':'block'}}>
             <nav className ="nav">
                 <LogoNav />
                 <MainNav />

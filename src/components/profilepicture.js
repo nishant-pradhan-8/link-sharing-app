@@ -1,10 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DataContext from "../context/context";
-function ProfilePicture(){
-    const { profileDetails,setImageChange, setProfileDetails, setImageFile} = useContext(DataContext)
-    const [errorImageUpload, setErrorImageUpload] = useState(false)
-    
 
+
+function ProfilePicture(){
+    const { profileDetails,retreivedData,setImageChange, setProfileDetails, setImageFile} = useContext(DataContext)
+    const [errorImageUpload, setErrorImageUpload] = useState(false)
+   
     function handleImageUpload(e){
         setErrorImageUpload(false)
         setImageChange(true)
@@ -19,7 +20,6 @@ function ProfilePicture(){
         const img = new Image();
 
         img.onload = () => {
-          
             if (img.width <= 1024 && img.height <= 1024) {
                 setImageFile(file)
                 
