@@ -13,10 +13,10 @@ function RightMainLink(){
     function handleAddLink(){
         let linkDiv = {}
         if(selectedLinks.length===0){
-            linkDiv = {'id':1,'selected_image':"./all_images/icon-github-gray.svg",'selected_social':'Github','link':''}
+            linkDiv = {'id':1,'selected_image':"./all_images/icon-Github-gray.svg",'selected_social':'Github','link':''}
         }
         else{
-            linkDiv = {'id':selectedLinks[selectedLinks.length - 1].id +1,'selected_image':"./all_images/icon-github-gray.svg",'selected_social':'Github','link':''}
+            linkDiv = {'id':selectedLinks[selectedLinks.length - 1].id +1,'selected_image':"./all_images/icon-Github-gray.svg",'selected_social':'Github','link':''}
         }
     
         const newLinkDivs = [...selectedLinks,linkDiv]
