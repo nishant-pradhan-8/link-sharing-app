@@ -20,7 +20,7 @@ function Dropdown({id,index}){
             alt:'Twitter Icon'
         },
         {
-            img:'./all_images/icon-linkedIn-gray.svg',
+            img:'./all_images/icon-linkedin-gray.svg',
             name: 'LinkedIn',
             alt:'LinkedIn Icon'
         },
@@ -55,7 +55,7 @@ function Dropdown({id,index}){
             alt:'Codepen Icon'
         },
         {
-            img:'./all_images/icon-freeCodeCamp-gray.svg',
+            img:'./all_images/icon-freecodecamp-gray.svg',
             name: 'freeCodeCamp',
             alt:'freeCodeCamp Icon'
         },
