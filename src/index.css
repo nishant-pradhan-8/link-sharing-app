@@ -337,7 +337,9 @@
 .authenticaltion-div{
   @apply p-4
 }
-
+.auth-reg{
+  @apply w-full
+}
 
   @media(min-width:475px){
     .saved-message-div{
@@ -400,8 +402,7 @@
      .profile-card-wrapper-personal{
       @apply bg-white
     }
-   
-    
+ 
   }
 
   @media(min-width:768px){

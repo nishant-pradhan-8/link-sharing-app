@@ -126,23 +126,25 @@ function useDataBase(){
     }
     setProfileNotSet(false)
       const userDocRef = doc(db, 'users',user)
-      const socialMedia = {
-              "Github":'',
-              "frontend Mentor":'',
-              "Twitter":'',
-              "Linkedin":'',
-              "Youtube":'',
-              "Facebook":'',
-              "Twitch":'',
-              "Dev.To":'',
-              "Codewars":'',
-              "Codepen":'',
-              "freeCodeCamp":'',
-              "GitLab":'',
-              "Hashnode":'',
-              "Stack Overflow":'',
+      const socialMedia ={
+        "Github":'',
+        "Frontend Mentor":'',
+        "Twitter":'',
+        "Linkedin":'',
+        "Youtube":'',
+        "Facebook":'',
+        "Twitch":'',
+        "Dev.To":'',
+        "Codewars":'',
+        "Codepen":'',
+        "freecodecamp":'',
+        "Gitlab":'',
+        "Hashnode":'',
+        "Stack Overflow":'',
      }
+  
      selectedLinks.forEach((linkDiv)=>{
+      console.log(linkDiv)
       if(linkDiv.selected_social in socialMedia){
         socialMedia[linkDiv.selected_social] = linkDiv.link
       }
@@ -186,19 +188,19 @@ function useDataBase(){
         lastName:lastName,
         email:email,
         socialMedia:{
-           "github":'',
+           "Github":'',
            "Frontend Mentor":'',
-           "twitter":'',
-           "linkedin":'',
-           "youtube":'',
-           "facebook":'',
-           "twitch":'',
+           "Twitter":'',
+           "Linkedin":'',
+           "Youtube":'',
+           "Facebook":'',
+           "Twitch":'',
            "Dev.To":'',
-           "codewars":'',
-           "codepen":'',
+           "Codewars":'',
+           "Codepen":'',
            "freecodecamp":'',
-           "gitlab":'',
-           "hashnode":'',
+           "Gitlab":'',
+           "Hashnode":'',
            "Stack Overflow":'',
         }
       })

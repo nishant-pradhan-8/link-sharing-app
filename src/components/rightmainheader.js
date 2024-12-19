@@ -19,6 +19,7 @@ function RightMainHeader(){
     const handleSignOut=()=>{
         signOut(auth).then(()=>{
             navigate('/login')
+            window.location.reload();
         })
     }
 

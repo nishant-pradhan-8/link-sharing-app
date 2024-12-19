@@ -24,6 +24,7 @@ export default function SignUp(){
         setUsedEmailError(false)
         if(password!==confirmPassword || password.length<6){
             setPasswordError(true)
+            setAuthLoader(false)
             return
         }
         createUserWithEmailAndPassword(auth, email, password)
@@ -34,6 +35,7 @@ export default function SignUp(){
           navigate("/")
         })
         .catch((error) => {
+            setAuthLoader(false)
           const errorCode = error.code;
           const errorMessage = error.message;
           console.log(errorMessage)
@@ -46,12 +48,12 @@ export default function SignUp(){
         });
        
     }
-    return <main className="authentication-main">
+    return <main className="authentication-main ">
     <div className="authentication-container">
     <div className="authentication-div">
             <img src="./all_images/logo-devlinks-large.svg" />
         </div>
-    <div className="authenticaltion-div">
+    <div className="authenticaltion-div auth-reg">
         <div className="authentication-text-div">
         <h1 className="primary-heading">Create Account</h1>
         <p className="primary-paragraph">Let’s get you started sharing your links!</p>
@@ -81,7 +83,7 @@ export default function SignUp(){
                     <p className="paragraph" style={{color:'red',display:emailError?'block':'none',fontSize:'0.8rem'}}>*Please enter a valid Email!</p>
                     <p className="paragraph" style={{color:'red',display:usedEmailError?'block':'none',fontSize:'0.8rem'}}>*Email already registered. Please Login!</p>
                     <button onClick={handleSignUp} className="primary-btn authentication-btn">
-                        {authLoader? <AuthSaving />:"Login"}  
+                        {authLoader? <AuthSaving />:"SignUp"}  
                     </button>
                 </form>
                 <p className="primary-paragraph">Already have an account? <a href="/link-sharing-app/#/login" className="create-account-a">Login</a> </p>
