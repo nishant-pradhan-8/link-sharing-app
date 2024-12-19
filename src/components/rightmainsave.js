@@ -6,7 +6,22 @@ function RightMainSave(){
     const {updateProfile} = useDataBase()
     
     const [noLinksMsg, setNoLinksMsg] = useState(false)
+    const [linkFormatNotValid,setLinkFormatNotValid] = useState(false);
+    const checkLinkFormat = ()=>{
+        for(let i = 0; i<selectedLinks.length; i++){
+            if(!(selectedLinks[i].link.startsWith("https://"))){
+                setLinkFormatNotValid(true);
+                return false
+            }
+        }
+        return true
+    }
+    
    async function handleSave(){
+       if(!checkLinkFormat()){
+        return
+       };
+       setLinkFormatNotValid(false);
         setSaving(true)
         setEmptyLinks({})
         if(selectedLinks.length===0){
@@ -50,7 +65,9 @@ function RightMainSave(){
     return(
         <div  className="rms-wrapper flex justify-between items-center">
             <p style={{display:profileNotSet?'block':'none'}} className="text-red-500" >Please fill your profile details first!</p>
+            <p style={{display:linkFormatNotValid?'block':'none'}} className="text-red-500" >Please Start Your Link with <b>"https://"</b></p>
             <p style={{visibility:noLinksMsg?'visible':'hidden'}} className="text-red-500" >Please add atleat one link!</p>
+           
             <button onClick={handleSave}  className="primary-btn save-btn">
                 Save
             </button>
