@@ -28,4 +28,4 @@
     </ul>
 
    <h2>Demo</h2>
-    <p>You can check out the live demo of the app <a href="https://nishant-pradhan-8.github.io/quiz-app/">here</a>.</p>
+    <p>You can check out the live demo of the app <a href="https://nishant-pradhan-8.github.io/link-sharing-app/">here</a>.</p>

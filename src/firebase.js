@@ -16,7 +16,7 @@ const projectId = process.env.REACT_APP_PROJECT_ID
 const storageBucket = process.env.REACT_APP_STORAGE_BUCKET
 const messagingSenderId = process.env.REACT_APP_MESSAGING_SENDER_ID
 const appId = process.env.REACT_APP_APP_ID
-console.log(authDomain)
+
 const firebaseConfig = {
   apiKey: apiKey,
   authDomain: authDomain,
@@ -144,7 +144,7 @@ function useDataBase(){
      }
   
      selectedLinks.forEach((linkDiv)=>{
-      console.log(linkDiv)
+ 
       if(linkDiv.selected_social in socialMedia){
         socialMedia[linkDiv.selected_social] = linkDiv.link
       }
