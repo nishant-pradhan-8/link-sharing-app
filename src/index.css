@@ -324,7 +324,7 @@
 }
 .authentication-btn{
   background: var(--purple);
-  @apply w-full  text-white
+  @apply w-full  text-white flex justify-center
 }
 .create-account-a{
   color: var(--purple)
