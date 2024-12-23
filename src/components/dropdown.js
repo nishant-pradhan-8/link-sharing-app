@@ -56,7 +56,7 @@ function Dropdown({id,index}){
         },
         {
             img:'./all_images/icon-freecodecamp-gray.svg',
-            name: 'freeCodeCamp',
+            name: 'freecodecamp',
             alt:'freeCodeCamp Icon'
         }, 
         {
