@@ -20,8 +20,6 @@ function RightMainSaveProfile() {
       await updateProfile();
       setSaving(false);
       setSaved(true);
-      
-
       setTimeout(() => {
         setSaved(false);
       }, 2000);

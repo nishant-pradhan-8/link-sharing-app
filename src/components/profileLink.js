@@ -9,8 +9,10 @@ function ProfileLink(){
     async function getData(){
             await retreiveSharedUserData(id);
     }
-    getData()
-    
+    useEffect(()=>{
+        getData()
+    },[])
+  
     return(
         <main style={{paddingBottom:'1rem'}} className="preview-main">
         <div className="profile-card-wrapper profile-card-wrapper-personal gap-2">

@@ -37,7 +37,7 @@ export const auth = getAuth();
 
 
 function useDataBase(){
-  const {profileDetails,setProfileDetails, setSelectedLinks,setLinkDivs,setProfileNotSet,imageChange,user, setUser, imageFile,selectedLinks} = useContext(DataContext)
+  const {profileDetails,setProfileDetails,setSaved, setSelectedLinks,setLinkDivs,setProfileNotSet,imageChange,user, setUser, imageFile,selectedLinks} = useContext(DataContext)
  
   useEffect(()=>{
     const subscription = onAuthStateChanged(auth,(user) => {
@@ -122,6 +122,7 @@ function useDataBase(){
     const {profilePic,firstName,lastName,email,} = profileDetails
     if(profileDetails.firstName===""){
       setProfileNotSet(true)
+    
       return
     }
     setProfileNotSet(false)
@@ -172,6 +173,7 @@ function useDataBase(){
           socialMedia:socialMedia,
         })
         const updatedProfile = {...profileDetails,'profilePic':newDownloadURL || profilePic,'firstName':firstName,'lastName':lastName,'email':email,}
+        setSaved(true)
         setProfileDetails(updatedProfile)
       
       }catch(err){

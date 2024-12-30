@@ -18,10 +18,10 @@ function RightMainSave(){
     }
     
    async function handleSave(){
-       if(!checkLinkFormat()){
-        return
-       };
-       setLinkFormatNotValid(false);
+        if(!checkLinkFormat()){
+            return
+        };
+        setLinkFormatNotValid(false);
         setSaving(true)
         setEmptyLinks({})
         if(selectedLinks.length===0){
@@ -53,7 +53,7 @@ function RightMainSave(){
         if (Object.keys(newError).length===0){
            await updateProfile()
             setSaving(false)
-            setSaved(true)
+        
             setTimeout(()=>{
                 setSaved(false)
             },3000)
