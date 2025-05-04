@@ -18,10 +18,17 @@ export default function SignUp(){
     const [usedEmailError, setUsedEmailError] = useState(false)
     const {createProfile} = useDataBase()
     function handleSignUp(){ 
+        if(email.trim()===""){
+            setEmailError(true);
+            return
+        }
         setAuthLoader(true)
         setEmailError(false)
         setPasswordError(false)
         setUsedEmailError(false)
+
+    
+      
         if(password!==confirmPassword || password.length<6){
             setPasswordError(true)
             setAuthLoader(false)
@@ -64,19 +71,19 @@ export default function SignUp(){
                         <label className="authentication-label" htmlfor="email">Email address</label>
                         <div className="input-field-div">
                           
-                            <input style={{borderColor:emailError?'red':'#d9d9d9'}} value={email} onChange={(e)=>setEmail(e.target.value)} type="email" className="authentication-input" placeholder="Enter your email " />
+                            <input style={{borderColor:emailError?'red':'#d9d9d9'}} required value={email} onChange={(e)=>setEmail(e.target.value)} type="email" className="authentication-input" placeholder="Enter your email " />
                         </div>
                     </div>
                     <div className="input-div">
                         <label  className="authentication-label" htmlfor="password">Password</label>
                         <div className="input-field-div">
-                            <input  style={{borderColor:passwordError?'red':'#d9d9d9'}}  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" className="authentication-input"  placeholder="At least 6 character" />
+                            <input  style={{borderColor:passwordError?'red':'#d9d9d9'}} required  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" className="authentication-input"  placeholder="At least 6 character" />
                         </div>
                     </div>
                     <div className="input-div">
                         <label  className="authentication-label" for="password">Confirm Password</label>
                         <div className="input-field-div">
-                            <input  style={{borderColor:passwordError?'red':'#d9d9d9'}}  value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}  type="password" className="authentication-input"  placeholder="At least 6 character" />
+                            <input  style={{borderColor:passwordError?'red':'#d9d9d9'}} required  value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}  type="password" className="authentication-input"  placeholder="At least 6 character" />
                         </div>
                     </div>
                     <p className="paragraph" style={{color:'red',display:passwordError?'block':'none',fontSize:'0.8rem'}}>*The password donot match or the password is less than 6 characters</p>

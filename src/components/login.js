@@ -12,6 +12,11 @@ export default function Login(){
     const [password, setPassword] = useState("")
     const [loginError, setLoginError] = useState(false)
     const handleLogin = ()=>{
+        if(email.trim()==="" && password.trim()===""){
+            setLoginError(true)
+           
+            return
+        }
         setAuthLoader(true)
         setLoginError(false)
         signInWithEmailAndPassword(auth, email, password)
@@ -44,13 +49,13 @@ export default function Login(){
                             <label className="authentication-label" htmlfor="email">Email address</label>
                             <div className="input-field-div">
                               
-                                <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" className="authentication-input" placeholder="Enter your email " />
+                                <input value={email} required onChange={(e)=>setEmail(e.target.value)} type="email" className="authentication-input" placeholder="Enter your email " />
                             </div>
                         </div>
                         <div className="input-div">
                             <label  className="authentication-label" htmlfor="password">Password</label>
                             <div className="input-field-div">
-                                <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password" className="authentication-input"  placeholder="Enter your password" />
+                                <input value={password} required onChange={(e)=>setPassword(e.target.value)} type="password" className="authentication-input"  placeholder="Enter your password" />
                             </div>
                         </div>
                         <p className="paragraph" style={{color:'red',display:loginError?'block':'none',fontSize:'0.8rem'}}>*Invalid email or passwrod. Please try again!</p>
